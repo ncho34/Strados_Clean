@@ -1,0 +1,94 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="SW_Test_Template" target="8" version="2">
+  <project Name="SW_Test_Template">
+    <configuration
+      CMSIS_CORE="Yes"
+      Name="Common"
+      c_preprocessor_definitions="USE_HAL_DRIVER;STM32L476xx"
+      c_user_include_directories="../Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../Drivers/BSP/Components/lsm6dsl/;../Middlewares/ST/BlueNRG-MS/includes;../Middlewares/ST/BlueNRG-MS/hci/hci_tl_patterns/Basic;../Middlewares/ST/BlueNRG-MS/utils"
+      project_directory=""
+      project_type="Combining" />
+    <folder Name="Source Files" />
+    <folder Name="Application/MDK-ARM">
+      <file file_name="startup_stm32l476xx.s">
+        <configuration Name="Common" build_exclude_from_build="Yes" />
+      </file>
+    </folder>
+    <folder Name="::CMSIS" />
+    <folder Name="Application/User">
+      <file file_name="../Src/main.c" />
+      <file file_name="../Src/hci_tl_interface.c" />
+      <file file_name="../Src/stm32l4xx_hal_exti.c" />
+      <file file_name="../Src/app_x-cube-ble1.c" />
+      <file file_name="../Src/mems_conf.c" />
+      <file file_name="../Src/bsp_motion_sensors.c" />
+      <file file_name="../Src/bsp_motion_sensors_ex.c" />
+      <file file_name="../Src/app_mems-library.c" />
+      <file file_name="../Src/usb_device.c" />
+      <file file_name="../Src/usbd_conf.c" />
+      <file file_name="../Src/usbd_desc.c" />
+      <file file_name="../Src/usbd_storage_if.c" />
+      <file file_name="../Src/custom_bus.c" />
+      <file file_name="../Src/stm32l4xx_it.c" />
+      <file file_name="../Src/stm32l4xx_hal_msp.c" />
+      <file file_name="../Src/stm32l4xx_hal_timebase_tim.c" />
+    </folder>
+    <folder Name="Drivers/BSP/Components">
+      <file file_name="../Drivers/BSP/Components/lsm6dsl/lsm6dsl_reg.c" />
+      <file file_name="../Drivers/BSP/Components/lsm6dsl/lsm6dsl.c" />
+    </folder>
+    <folder Name="Drivers/STM32L4xx_HAL_Driver">
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" />
+      <file file_name="../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" />
+    </folder>
+    <folder Name="Drivers/CMSIS">
+      <file file_name="../Src/system_stm32l4xx.c" />
+    </folder>
+    <folder Name="Middlewares/USB_Device_Library">
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" />
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" />
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" />
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c" />
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c" />
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_data.c" />
+      <file file_name="../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_scsi.c" />
+    </folder>
+    <folder Name="Middlewares/BlueNRG-MS/Wireless/Controller">
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gatt_aci.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_hal_aci.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_IFR.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_l2cap_aci.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_updater_aci.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_utils_small.c" />
+    </folder>
+    <folder Name="Middlewares/BlueNRG-MS/Wireless/HCI_TL/Basic">
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/hci_tl_patterns/Basic/hci_tl.c" />
+      <file file_name="../Middlewares/ST/BlueNRG-MS/hci/hci_le.c" />
+    </folder>
+    <folder Name="Middlewares/BlueNRG-MS/Wireless/Utils">
+      <file file_name="../Middlewares/ST/BlueNRG-MS/utils/ble_list.c" />
+    </folder>
+  </project>
+  <configuration Name="Common" />
+</solution>
